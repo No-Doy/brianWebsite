@@ -70,8 +70,8 @@
 				<div id="header" class="row">
 					<div class="4u">
 						<div class="wrapper">
-							<h1><a href="index.html">brian<span class="header_colour">alfano</span></a></h1>
-							<h2>Software Engineer Personal Website</h2>
+							<h1><a href="index.html">Brian A. <span class="header_colour">Alfano</span></a></h1>
+							<h2>Software Engineer - CU Boulder class of 2017</h2>
 					    </div>
 					</div>
 					
@@ -82,7 +82,6 @@
 							<li><a href="apage.html">A Page</a></li>
 							<li><a href="anotherpage.html">Another Page</a></li>
 							<li><a href="contact.php">Contact</a></li>
-
 						</ul>
 					</nav>
 				</div>
@@ -93,7 +92,7 @@
 					<div id="wrapper-banner">						
 						<!-- Banner -->								
 						<div id="banner">
-							<a href="#"><img src="images/pro.jpg" alt="banner image" /></a>
+							<a> <img src="images/raspberrypi.jpg" alt="banner image" /></a>
 						</div>	
 					</div>
 				</div>						
@@ -106,7 +105,6 @@
 				
 			<!-- Features -->
 				<div class="row">
-					
 					<section class="4u">
 						<div id="sidebar">
 							<section class="12u">
@@ -120,30 +118,38 @@
 									<li> <a href="http://www.github.com/No-Doy" target="_blank">Personal Git-Hub</a></li>
 									<li><a href="http://www.linkedin.com" target="_blank">Linked In</a></li>
 									<li><a href="http://stache.link" target = "_blank">Stache Project</a></li>
+									<li> <a href ="resume.pdf"> Resume </a></li>
 								</ul>
 							</section>
 						</div>
 					</section>					
 					
 					<section class="8u">						
-						<h1>Examples</h1>
+						<h1>Projects</h1>
 						
-						<h2>Images</h2>
-						<p>images can be placed on the left, in the center or on the right:</p>
-						<span class="left"><img src="images/graphic.jpg" alt="example graphic" /></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-						irure dolor in reprehenderit in voluptate velit esse cillum.
-						</p>
-						<span class="center"><img src="images/graphic.jpg" alt="example graphic" /></span>
-						<span class="right"><img src="images/graphic.jpg" alt="example graphic" /></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-						irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur.</p>
-						<h2>Form Elements</h2>
+						<h4>(1) Software Methods and Tools: <a href = "http://stache.link" target ="_blank">Stache.Link</a></h4>
+						<p><dfn> Overview:</dfn> Create anything using Methods and Tools learned.  Use methodologies, VCS, IDE/Editors, databases, peer code review, and project tracking software.</p>
+						<p><dfn> Problem:</dfn> You save links in your web browser and all the links look the same. With Stache you get a special thumbnail and a beautiful organization of media. Our interface will parse the video links, photo links, and any other link into the appropriate category.</p>
+						<p><i>Typical Safari bookmarks:</i> <span class="center"><img src="images/safari.png" alt ="example graphic" /></span> </p>
+						<p><i> Stache's beatiful bookmarking:</i> <span class="center"><img src="images/stache2.png" alt ="example graphic" /></span> <p>
+						<p><dfn> Solution:</dfn> My idea was to create a webpage for a user to post their favorite media (photos, videos, music, and websites). Stache is a better way to bookmark everything cool you find on the Internet.</p>
+						<p><dfn> Implementation: </dfn> Thanks to a great team we created <a href = "http://stache.link" target =  "_blank">Stache.link</a>. We used Agile Management Software Development – this allows flexibility for the developers to react to the unpredictability of the project and focuses on shorter intervals in order to deliver the product accordingly. We used user story sizing to decide the risk, complexity, and effort of each story, which were moved from product backlog board to the active sprint.
+						An important part for our development was the use of pair programming, in order to write better code, increased productivity, quickly catch bugs, and have a focused direction of development. I mainly programmed in the text editor Sublime Text to work with HTML and CSS.
+						MySQL – this is an open source relational database management system that uses SQL to manipulate the contents within the database.
+						Everything was pushed to a Github repository. Github served great for a version control system. </p>
+
+						<h4>(2) Power Cycling using RaspberryPi</h4>
+						<p> <dfn> Overview:</dfn> Grandparents have a vacation home that is in the desert 120 miles away.  The home has automation through the internet which includes video camera, IP phone, thermostat control and garage door monitoring.  Having the ability to turn on the Air Conditioner before arrival helps cool down the house which is critical for a home in the desert during the summer months.</p>
+						<p> <dfn> Problem:</dfn> The internet occasionally will go down which requires a reboot of the equipement. This is a manual process that requires unplugging the modem, IP phone and router and then plugging them back in one at a time in a specific order, waiting for each to boot before plugging in the next.  Since the home is 2 hours away, this is not feasible without physically being at the location and would require a 4 hour round trip to accomplish.</p>
+						<p><dfn>Solution:</dfn> Provide a monitoring system that will continually check to see if the internet is connected and have the ability to automatically reboot the hardware if the internet is down.</p>
+						<p><dfn>Implementation:</dfn>  Design is to use a Raspberry PI computer board driving a relay board to accomplish this.  The Raspberry PI runs a shell script every ten minutes (through a Cron job) that pings a couple of web sites (yahoo and google) to determine if the internet is active.  If both pings fail, a C program gets launched that turns off all the devices attached to the relay board. Then they get turned on one by one to reboot.  At the end of the reboot process, once the internet is restored, an automated email is sent to indicate that a reboot occurred.</p>
+						<p> The code can be found on this <a href = "https://github.com/No-Doy/palmsprings.git" target ="_blank">repository.</a></p>
+
+						<h4>(3) Python Game</h4>
+						<p> <dfn>Overview:</dfn> For a final project in the class Intro to Programming (CSCI 1300) write 150 or more lines of code for a game.</p>
+						<p><dfn>Solution:</dfn> Based on users input to the questions asked make the game play accordingly.</p>
+						<p> <dfn>Implementation:</dfn> Requirments consisted of a certain number of classes, functions, and conditional statements. Created in Fall of 2013.</p>
+						<p> The code can be found on this <a href = "http://www.github.com/no-doy" target ="_blank">repository.</a></p>
 
 					</section>
 					
@@ -155,7 +161,7 @@
 			<!-- Footer -->
 				<footer>
 					<p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="apage.html">A Page</a> | <a href="anotherpage.html">Another Page</a> | <a href="contact.php">Contact Us</a></p>
-					<p>Copyright &copy; CSS3_water | <a href="http://skeljs.org/">skel.js</a> | <a href="http://fotogrph.com/">Images</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+					<p><a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
 				</footer>		
 			</div>
         </div>		
